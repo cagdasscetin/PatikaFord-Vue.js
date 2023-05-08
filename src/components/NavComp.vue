@@ -5,8 +5,9 @@ import { RouterLink } from "vue-router"
 <template>
     <nav>
         <RouterLink to="/">Home Page</RouterLink>
+        <RouterLink to="/listing">Listing Page</RouterLink>
         <RouterLink to="/inbox">Inbox Page</RouterLink>
-        <RouterLink to="/inbox/mail">Inbox / Mail Page</RouterLink>
+        <RouterLink to="/inbox/sub">Inbox > Sub Page</RouterLink>
     </nav>
 </template>
 
@@ -14,18 +15,20 @@ import { RouterLink } from "vue-router"
 nav {
     margin: 20px;
     padding: 0;
+    
+    min-height: 80px;
 
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
 
     a {
         margin: 20px;
         padding: 8px 20px;
         font-size: 24px;
         
-        background-color: purple;
+        background-color: pink;
         color: white;
         text-decoration: none;
 
@@ -43,8 +46,8 @@ nav {
         }
 
         &.router-link-exact-active {
-            color: invert($color: white);
-            background-color: invert($color: purple);
+            color: plum;
+            background-color: purple;
         }
     }
 }
