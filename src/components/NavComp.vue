@@ -4,10 +4,11 @@ import { RouterLink } from "vue-router"
 
 <template>
     <nav>
-        <RouterLink to="/">Home Page</RouterLink>
+        <RouterLink :to="{ name: 'Home', query: { click: 'Nav Component' } }">Home Page</RouterLink>
         <RouterLink to="/listing">Listing Page</RouterLink>
-        <RouterLink to="/inbox">Inbox Page</RouterLink>
+        <RouterLink :to="{ name: 'Inbox' }">Inbox Page</RouterLink>
         <RouterLink to="/inbox/sub">Inbox > Sub Page</RouterLink>
+        <RouterLink to="/life">Component Life Cycles</RouterLink>
     </nav>
 </template>
 
@@ -15,7 +16,7 @@ import { RouterLink } from "vue-router"
 nav {
     margin: 20px;
     padding: 0;
-    
+
     min-height: 80px;
 
     display: flex;
@@ -27,13 +28,13 @@ nav {
         margin: 20px;
         padding: 8px 20px;
         font-size: 24px;
-        
+
         background-color: pink;
         color: white;
         text-decoration: none;
 
         border-radius: 8px;
-        
+
         &:visited {
             color: white;
             text-decoration: none;
